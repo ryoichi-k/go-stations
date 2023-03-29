@@ -2,6 +2,7 @@ package main
 
 import (
 	"log"
+	"net/http"
 	"os"
 	"time"
 
@@ -52,5 +53,6 @@ func realMain() error {
 
 	// TODO: サーバーをlistenする
 
+	http.ListenAndServe(port, mux)
 	return nil
 }
